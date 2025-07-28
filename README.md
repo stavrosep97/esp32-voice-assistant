@@ -4,7 +4,7 @@ This is a voice assistant project using ESP32-S3, web interface and a Node.js ba
 The assistant listens, sends audio to a server, gets a response from AI, and plays it back through a speaker. Designed specifically to support the Greek language.
 
 🧠 How It Works
-ESP32-S3 records voice through web interface using your computer mic.
+ESP32-S3 records voice through web interface using your computer.
 
 The recorded .wav file is saved to SPIFFS filesystem.
 
@@ -45,8 +45,8 @@ npm package manager
 OpenAI API key
 
 1. Clone the repo
-git clone https://github.com/your-repo
-cd your-repo
+git clone https://github.com/stavrosep97/esp32-voice-assistant.git
+cd your-esp32-voice-assistant
 
 2. Install dependencies
 npm install
