@@ -1,41 +1,35 @@
-Αλλαγές Voice Assistant
+Voice Assistant Updates
+Main Improvements
+1. Upgrade to GPT-4o
+The system now uses the GPT-4o model instead of GPT-3.5-turbo. This offers:
 
-Κύριες Βελτιώσεις
-
-1. Αναβάθμιση σε GPT-4o
-
-Το σύστημα χρησιμοποιεί πλέον το μοντέλο GPT-4o αντί για το GPT-3.5-turbo. Αυτό προσφέρει:
-- Καλύτερες και πιο ακριβείς απαντήσεις
-- Βελτιωμένη κατανόηση της ελληνικής γλώσσας
-- Ταχύτερη απόκριση
+⦁	Better and more accurate responses
+⦁	Improved understanding of the Greek language
+⦁	Faster response times
 
 
-2. Σύστημα Ουράς για Πολλούς Χρήστες
+2. Queue System for Multiple Users
+In the previous version, only one user could use the system at a time. Now multiple users can ask questions simultaneously.
+How it works:
 
-Στην προηγούμενη έκδοση μόνο ένας χρήστης μπορούσε να χρησιμοποιήσει το σύστημα κάθε φορά. Τώρα πολλοί χρήστες μπορούν να κάνουν ερωτήσεις ταυτόχρονα.
+⦁	Questions are placed in a waiting queue
+⦁	Each answer plays in order on the ESP32
+⦁	No user loses their answer
 
-Πώς λειτουργεί:
-- Οι ερωτήσεις μπαίνουν σε ουρά αναμονής
-- Η κάθε απάντηση παίζει με τη σειρά της στο ESP32
-- Κανένας χρήστης δεν χάνει την απάντησή του
+Technical implementation:
 
-Τεχνική υλοποίηση:
-- Δημιουργήθηκε η κλάση AudioQueue που διαχειρίζεται τις ερωτήσεις
-- Νέο endpoint /queueStatus για πληροφορίες ουράς
-- Το web interface δείχνει πόσοι χρήστες περιμένουν και ποια ερώτηση παίζει
+⦁	Created the AudioQueue class to manage requests
+⦁	New /queueStatus endpoint for queue information
+⦁	Web interface shows how many users are waiting and which question is playing
 
-3. Βελτιωμένο Web Interface
+3. Enhanced Web Interface
+New features:
 
-Νέα χαρακτηριστικά:
-- Πεδίο ονόματος χρήστη
-- Εμφάνιση θέσης στην ουρά
-- Πραγματικός έλεγχος σύνδεσης ESP32 με χρωματική ένδειξη
-- Βελτιωμένη οπτική διάταξη συνομιλίας
+⦁	Username field
+⦁	Display of position in queue
+⦁	Real-time ESP32 connection status with color indicator
+⦁	Improved conversation layout
 
-
- Εγκατάσταση
-
-Ο κώδικας του ESP32 παραμένει ο ίδιος. Απαιτείται μόνο η αντικατάσταση του server.js με το servernew.js και επανεκκίνηση του server.
-
-
-node servernew.js
+Installation
+The ESP32 code remains the same. Only the server.js file needs to be replaced with servernew.js and the server restarted.
+//node servernew.js
